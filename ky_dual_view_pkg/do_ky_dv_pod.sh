@@ -14,7 +14,7 @@ pip install -q "numpy<2" pandas scikit-learn scipy rasterio tqdm matplotlib gdow
 
 if [ ! -d processed/rasters_cleaned_10m ]; then
   echo "pulling KY rasters via gdown..."
-  gdown 11uXFn2JE42nGOUXM7KO_5CtaedmpTpM2 -O processed_data.zip
+  gdown "${KY_RASTERS_GDRIVE_ID:?set to the KY processed_data.zip Drive file id (ask the data owner)}" -O processed_data.zip
   unzip -q processed_data.zip || python -m zipfile -e processed_data.zip .
 fi
 NTIF=$(ls processed/rasters_cleaned_10m/*.tif 2>/dev/null | wc -l)
