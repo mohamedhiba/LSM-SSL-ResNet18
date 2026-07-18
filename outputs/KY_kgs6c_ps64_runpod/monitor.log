@@ -1,0 +1,412 @@
+===== iter 1  08:08:58 UTC =====
+==================== KY RUN STATUS  08:09:02 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 117.68 W
+MEM : 14086 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 42 
+  s123  methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 123 
+  s7    methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 2  08:14:31 UTC =====
+==================== KY RUN STATUS  08:14:35 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 99.32 W
+MEM : 12856 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 42 
+  s123  methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 123 
+  s7    methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 3  08:20:00 UTC =====
+==================== KY RUN STATUS  08:20:12 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 113.72 W
+MEM : 12853 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 42 
+  s123  methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 123 
+  s7    methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 4  08:26:44 UTC =====
+==================== KY RUN STATUS  08:26:48 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 114.39 W
+MEM : 12857 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 42 
+  s123  methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 123 
+  s7    methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 5  08:32:08 UTC =====
+==================== KY RUN STATUS  08:32:12 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 106.17 W
+MEM : 12854 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 42 
+  s123  methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 123 
+  s7    methods_done=1  fold_lines=10 |  SSL pretrain masked_recon seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 6  08:37:30 UTC =====
+==================== KY RUN STATUS  08:37:33 ====================
+GPU : 79 %, 7606 MiB, 24564 MiB, 282.20 W
+MEM : 14192 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=1  fold_lines=15 |  finetune masked_recon seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=1  fold_lines=13 |  finetune masked_recon seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=1  fold_lines=11 |  finetune masked_recon seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 3 / 15 (method x seed) rows ------
+===== iter 7  08:42:55 UTC =====
+==================== KY RUN STATUS  08:42:58 ====================
+GPU : 100 %, 7606 MiB, 24564 MiB, 314.83 W
+MEM : 15680 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=2  fold_lines=20 |  SSL pretrain cross_channel seed 42 
+  s123  methods_done=1  fold_lines=17 |  finetune masked_recon seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=1  fold_lines=17 |  finetune masked_recon seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  scratch        seed=7    AUC=0.6922481364984683
+------ combined count: 4 / 15 (method x seed) rows ------
+===== iter 8  08:48:16 UTC =====
+==================== KY RUN STATUS  08:48:21 ====================
+GPU : 60 %, 7606 MiB, 24564 MiB, 256.85 W
+MEM : 17129 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=2  fold_lines=25 |  finetune cross_channel seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=2  fold_lines=21 |  finetune cross_channel seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=2  fold_lines=20 |  SSL pretrain cross_channel seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+------ combined count: 6 / 15 (method x seed) rows ------
+===== iter 9  08:53:56 UTC =====
+==================== KY RUN STATUS  08:54:00 ====================
+GPU : 100 %, 7606 MiB, 24564 MiB, 317.18 W
+MEM : 18680 / 29563 MiB  (OOM cap)
+PROC: 9 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=3  fold_lines=30 |  SSL pretrain strip_jigsaw seed 42 
+  s123  methods_done=2  fold_lines=29 |  finetune cross_channel seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=2  fold_lines=27 |  finetune cross_channel seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+------ combined count: 7 / 15 (method x seed) rows ------
+===== iter 10  08:59:17 UTC =====
+==================== KY RUN STATUS  08:59:21 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 282.99 W
+MEM : 20841 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=3  fold_lines=35 |  finetune strip_jigsaw seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=3  fold_lines=35 |  finetune strip_jigsaw seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=3  fold_lines=31 |  finetune strip_jigsaw seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+------ combined count: 9 / 15 (method x seed) rows ------
+===== iter 11  09:05:03 UTC =====
+==================== KY RUN STATUS  09:05:07 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 165.58 W
+MEM : 22338 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=3  fold_lines=39 |  finetune strip_jigsaw seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+------ combined count: 11 / 15 (method x seed) rows ------
+===== iter 12  09:10:28 UTC =====
+==================== KY RUN STATUS  09:10:39 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 116.25 W
+MEM : 22738 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 13  09:15:58 UTC =====
+==================== KY RUN STATUS  09:16:02 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 120.09 W
+MEM : 22731 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 14  09:21:18 UTC =====
+==================== KY RUN STATUS  09:21:23 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 100.59 W
+MEM : 22736 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 15  09:26:41 UTC =====
+==================== KY RUN STATUS  09:26:45 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 117.67 W
+MEM : 22738 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 16  09:32:03 UTC =====
+==================== KY RUN STATUS  09:32:06 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 117.77 W
+MEM : 22736 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 17  09:37:25 UTC =====
+==================== KY RUN STATUS  09:37:28 ====================
+GPU : 99 %, 7606 MiB, 24564 MiB, 109.19 W
+MEM : 22736 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 18  09:42:44 UTC =====
+==================== KY RUN STATUS  09:42:49 ====================
+GPU : 100 %, 7620 MiB, 24564 MiB, 167.99 W
+MEM : 23110 / 29563 MiB  (OOM cap)
+PROC: 12 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 42 
+  s123  methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 123 
+  s7    methods_done=4  fold_lines=40 |  SSL pretrain sequential seed 7 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 19  09:48:12 UTC =====
+==================== KY RUN STATUS  09:48:15 ====================
+GPU : 98 %, 7648 MiB, 24564 MiB, 286.95 W
+MEM : 24973 / 29563 MiB  (OOM cap)
+PROC: 10 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=4  fold_lines=45 |  finetune sequential seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=4  fold_lines=45 |  finetune sequential seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=4  fold_lines=41 |  finetune sequential seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 12 / 15 (method x seed) rows ------
+===== iter 20  09:53:39 UTC =====
+==================== KY RUN STATUS  09:53:43 ====================
+GPU : 31 %, 5101 MiB, 24564 MiB, 201.71 W
+MEM : 22772 / 29563 MiB  (OOM cap)
+PROC: 8 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=5  fold_lines=50 |  finetune sequential seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=4  fold_lines=49 |  finetune sequential seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=4  fold_lines=47 |  finetune sequential seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  sequential     seed=42   AUC=0.6781361808008578
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+------ combined count: 13 / 15 (method x seed) rows ------
+===== iter 21  09:59:01 UTC =====
+==================== KY RUN STATUS  09:59:05 ====================
+GPU : 0 %, 1 MiB, 24564 MiB, 10.78 W
+MEM : 14552 / 29563 MiB  (OOM cap)
+PROC: 0 python processes
+------ per-seed progress (current method / folds done) ------
+  s42   methods_done=5  fold_lines=50 |  finetune sequential seed 42 (enc_lr5e-06, head_lr2e-05) 
+  s123  methods_done=5  fold_lines=50 |  finetune sequential seed 123 (enc_lr5e-06, head_lr2e-05) 
+  s7    methods_done=5  fold_lines=50 |  finetune sequential seed 7 (enc_lr5e-06, head_lr2e-05) 
+------ results so far (method, seed, mean AUC) ------
+  scratch        seed=123  AUC=0.722185482311498
+  masked_recon   seed=123  AUC=0.6933283929043444
+  cross_channel  seed=123  AUC=0.6589178808063527
+  strip_jigsaw   seed=123  AUC=0.6687662209645049
+  sequential     seed=123  AUC=0.6416510022630041
+  scratch        seed=42   AUC=0.6957407751614472
+  masked_recon   seed=42   AUC=0.7253585891649511
+  cross_channel  seed=42   AUC=0.7167327471927477
+  strip_jigsaw   seed=42   AUC=0.6187743138478561
+  sequential     seed=42   AUC=0.6781361808008578
+  scratch        seed=7    AUC=0.6922481364984683
+  masked_recon   seed=7    AUC=0.711084057621356
+  cross_channel  seed=7    AUC=0.6762006504938087
+  strip_jigsaw   seed=7    AUC=0.6939173232096769
+  sequential     seed=7    AUC=0.6603183154965098
+------ combined count: 15 / 15 (method x seed) rows ------
+ALL 15 DONE at 09:59:01
+monitor loop ended 09:59:23

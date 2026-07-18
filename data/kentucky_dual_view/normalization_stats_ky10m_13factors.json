@@ -1,0 +1,213 @@
+{
+  "conditioning_factor_resolution": "10m",
+  "conditioning_factor_folder": "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m",
+  "include_landcover": false,
+  "factor_order": [
+    "aspect",
+    "bulk_density",
+    "clay_pct",
+    "elevation",
+    "field_capacity",
+    "ksat",
+    "ndvi_annual_mean_2015_2024",
+    "plan_curv",
+    "profile_curv",
+    "sand_pct",
+    "slope",
+    "spi_dinf",
+    "twi_dinf"
+  ],
+  "factor_raster_paths": [
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/aspect_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/bulk_density_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/clay_pct_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/elevation_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/field_capacity_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/ksat_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/ndvi_annual_mean_2015_2024_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/plan_curv_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/profile_curv_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/sand_pct_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/slope_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/spi_dinf_10m.tif",
+    "/Users/mohamedhiba/Projects/processed/rasters_cleaned_10m/twi_dinf_10m.tif"
+  ],
+  "n_factor_channels": 13,
+  "mask_channel_index": 13,
+  "in_channels": 14,
+  "local_size": 15,
+  "global_size": 31,
+  "local_physical_size_m": 150.0,
+  "global_physical_size_m": 310.0,
+  "reference_crs": "EPSG:3088",
+  "reference_transform": [
+    10.0,
+    0.0,
+    1658110.0,
+    0.0,
+    -10.0,
+    1154310.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "reference_shape": [
+    9078,
+    12457
+  ],
+  "reference_resolution": [
+    10.0,
+    10.0
+  ],
+  "nodata_value": -9999.0,
+  "factor_channel_means": [
+    183.64937671631648,
+    1565.5413039032562,
+    24.078698778966135,
+    406.3458750851818,
+    0.3229819387941665,
+    4.660036483454789,
+    0.6948424872582616,
+    -0.000372321188859508,
+    -0.00033474106282798175,
+    34.37607741169656,
+    22.586313615836485,
+    3.3425712058730834,
+    5.334956009923145
+  ],
+  "factor_channel_stds": [
+    103.02512348395302,
+    19.83422046203446,
+    2.9378879987294653,
+    104.9304697099359,
+    0.015186975020466972,
+    1.0368724811891419,
+    0.05756529020285166,
+    0.09393856969036668,
+    0.006954294039490612,
+    3.9331330245843,
+    9.509983017136797,
+    1.443646268208267,
+    1.863035637461601
+  ],
+  "stats": [
+    {
+      "factor_order": 1,
+      "factor_name": "aspect",
+      "mean": 183.64937671631648,
+      "std": 103.02512348395302,
+      "min": -1.0,
+      "max": 360.0,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 2,
+      "factor_name": "bulk_density",
+      "mean": 1565.5413039032562,
+      "std": 19.83422046203446,
+      "min": 1434.5,
+      "max": 1620.0,
+      "valid_count": 62106939
+    },
+    {
+      "factor_order": 3,
+      "factor_name": "clay_pct",
+      "mean": 24.078698778966135,
+      "std": 2.9378879987294653,
+      "min": 12.0649995803833,
+      "max": 37.98749923706055,
+      "valid_count": 62108204
+    },
+    {
+      "factor_order": 4,
+      "factor_name": "elevation",
+      "mean": 406.3458750851818,
+      "std": 104.9304697099359,
+      "min": 197.37355041503906,
+      "max": 1135.1715087890625,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 5,
+      "factor_name": "field_capacity",
+      "mean": 0.3229819387941665,
+      "std": 0.015186975020466972,
+      "min": 0.24015000462532043,
+      "max": 0.3631249964237213,
+      "valid_count": 62116831
+    },
+    {
+      "factor_order": 6,
+      "factor_name": "ksat",
+      "mean": 4.660036483454789,
+      "std": 1.0368724811891419,
+      "min": 1.1871330738067627,
+      "max": 17.80422592163086,
+      "valid_count": 62111779
+    },
+    {
+      "factor_order": 7,
+      "factor_name": "ndvi_annual_mean_2015_2024",
+      "mean": 0.6948424872582616,
+      "std": 0.05756529020285166,
+      "min": -0.34429287910461426,
+      "max": 0.8365560173988342,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 8,
+      "factor_name": "plan_curv",
+      "mean": -0.000372321188859508,
+      "std": 0.09393856969036668,
+      "min": -75.46588134765625,
+      "max": 136.92088317871094,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 9,
+      "factor_name": "profile_curv",
+      "mean": -0.00033474106282798175,
+      "std": 0.006954294039490612,
+      "min": -0.09684158116579056,
+      "max": 0.08532682806253433,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 10,
+      "factor_name": "sand_pct",
+      "mean": 34.37607741169656,
+      "std": 3.9331330245843,
+      "min": 12.619999885559082,
+      "max": 55.662498474121094,
+      "valid_count": 62108204
+    },
+    {
+      "factor_order": 11,
+      "factor_name": "slope",
+      "mean": 22.586313615836485,
+      "std": 9.509983017136797,
+      "min": 0.0,
+      "max": 72.71855926513672,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 12,
+      "factor_name": "spi_dinf",
+      "mean": 3.3425712058730834,
+      "std": 1.443646268208267,
+      "min": 0.00995033048093319,
+      "max": 18.241060256958008,
+      "valid_count": 62292870
+    },
+    {
+      "factor_order": 13,
+      "factor_name": "twi_dinf",
+      "mean": 5.334956009923145,
+      "std": 1.863035637461601,
+      "min": 1.5717602968215942,
+      "max": 26.490922927856445,
+      "valid_count": 62292870
+    }
+  ],
+  "design_note": "The 10 m-class local/global windows intentionally cover a smaller physical footprint than the previous 30 m setup to emphasize finer-scale terrain and environmental context."
+}

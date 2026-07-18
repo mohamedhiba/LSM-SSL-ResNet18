@@ -1,0 +1,2 @@
+local_size,global_size,pixel_size_m,local_physical_size_m,global_physical_size_m,design_note
+15,31,10.0,150.0,310.0,The 10 m-class local/global windows intentionally cover a smaller physical footprint than the previous 30 m setup to emphasize finer-scale terrain and environmental context.

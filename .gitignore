@@ -1,0 +1,33 @@
+# environments / caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+
+# heavy data — not in the repo (see README "Data availability")
+data/*
+!data/kentucky_dual_view/
+checkpoints/
+*.npz
+*.tif
+
+# transfer/compute packages (regenerable; caches + pod payloads)
+ky_flat_pkg/
+ky_package/
+colab_package/
+kentucky_kgs_package.zip
+ky_dual_view_pkg/*.tar.gz
+
+# Qianyi's code package — external dependency, not ours to publish
+LSM_SSL_ResNet18_10m_dual_view_code/
+
+# superseded internal working docs
+docs/archive/
+
+# bulky per-epoch training logs & smoke artifacts from the aligned run
+outputs/KY_dual_view_aligned/flat_cv/*/downstream/
+outputs/KY_dual_view_aligned/smoke/
+outputs/KY_dual_view_aligned/smoke_local.log
+
+nohup.out

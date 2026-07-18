@@ -1,0 +1,1331 @@
+[colab_patch] raster->cache monkeypatch installed
+[colab_patch] registered cache for /workspace/ky/pkg/indices/labeled_ky_ps64_sub.csv: shape=(3198, 13, 64, 64)
+[colab_patch] registered cache for /workspace/ky/pkg/indices/ky_unlabeled_ps64_n3000.csv: shape=(3000, 13, 64, 64)
+[cache-mode] registered caches; raster_dir=__virtual__
+device: cuda  methods: ['scratch', 'masked_recon', 'cross_channel', 'strip_jigsaw', 'sequential']
+
+===== prepare shared SSL data seed 123 =====
+
+===== finetune scratch seed 123 (enc_lr=0.0001, head_lr=0.0001) =====
+/workspace/ky/repo/src/train_finetune.py:269: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(encoder_checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+
+========================================================================
+Fold 0: held-out test cluster 0
+train clusters: [1, 2, 3, 4]
+validation size: 463
+test cluster: 0
+train label counts:
+label
+0    1327
+1     521
+val label counts:
+label
+0    333
+1    130
+test label counts:
+label
+0    472
+1    415
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 0 test AUC: 0.648144; best threshold: 0.298206
+
+========================================================================
+Fold 1: held-out test cluster 1
+train clusters: [0, 2, 3, 4]
+validation size: 488
+test cluster: 1
+train label counts:
+label
+0    1177
+1     774
+val label counts:
+label
+0    295
+1    193
+test label counts:
+label
+0    660
+1     99
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 1 test AUC: 0.783701; best threshold: 0.193187
+
+========================================================================
+Fold 2: held-out test cluster 2
+train clusters: [0, 1, 3, 4]
+validation size: 562
+test cluster: 2
+train label counts:
+label
+0    1546
+1     699
+val label counts:
+label
+0    387
+1    175
+test label counts:
+label
+0    199
+1    192
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 2 test AUC: 0.737542; best threshold: 0.007989
+
+========================================================================
+Fold 3: held-out test cluster 3
+train clusters: [0, 1, 2, 4]
+validation size: 569
+test cluster: 3
+train label counts:
+label
+0    1533
+1     739
+val label counts:
+label
+0    384
+1    185
+test label counts:
+label
+0    215
+1    142
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 3 test AUC: 0.619391; best threshold: 0.008612
+
+========================================================================
+Fold 4: held-out test cluster 4
+train clusters: [0, 1, 2, 3]
+validation size: 479
+test cluster: 4
+train label counts:
+label
+0    1237
+1     678
+val label counts:
+label
+0    309
+1    170
+test label counts:
+label
+0    586
+1    218
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+Fold 4 test AUC: 0.822150; best threshold: 0.043437
+  scratch seed 123: mean-fold AUC = 0.7222
+
+===== SSL pretrain masked_recon seed 123 =====
+  [masked_recon s123] 30 ep, train/val=2700/300
+epoch 001: train_loss=0.925042, val_loss=0.846070
+epoch 002: train_loss=0.682563, val_loss=0.596829
+epoch 003: train_loss=0.582346, val_loss=0.548233
+epoch 004: train_loss=0.525087, val_loss=0.491127
+epoch 005: train_loss=0.462250, val_loss=0.445916
+epoch 006: train_loss=0.430126, val_loss=0.384581
+epoch 007: train_loss=0.401311, val_loss=0.379959
+epoch 008: train_loss=0.365082, val_loss=0.353181
+epoch 009: train_loss=0.375016, val_loss=0.345099
+epoch 010: train_loss=0.348702, val_loss=0.330051
+epoch 011: train_loss=0.330056, val_loss=0.339050
+epoch 012: train_loss=0.344192, val_loss=0.299108
+epoch 013: train_loss=0.323517, val_loss=0.283267
+epoch 014: train_loss=0.323195, val_loss=0.287961
+epoch 015: train_loss=0.316951, val_loss=0.298859
+epoch 016: train_loss=0.321224, val_loss=0.279435
+epoch 017: train_loss=0.307850, val_loss=0.263943
+epoch 018: train_loss=0.306743, val_loss=0.272178
+epoch 019: train_loss=0.295744, val_loss=0.259436
+epoch 020: train_loss=0.287439, val_loss=0.280863
+epoch 021: train_loss=0.280422, val_loss=0.250981
+epoch 022: train_loss=0.291327, val_loss=0.259034
+epoch 023: train_loss=0.286608, val_loss=0.271224
+epoch 024: train_loss=0.270440, val_loss=0.247578
+epoch 025: train_loss=0.272577, val_loss=0.251282
+epoch 026: train_loss=0.265333, val_loss=0.249960
+epoch 027: train_loss=0.258682, val_loss=0.244311
+epoch 028: train_loss=0.261883, val_loss=0.242669
+epoch 029: train_loss=0.271566, val_loss=0.242351
+epoch 030: train_loss=0.251743, val_loss=0.233940
+
+===== finetune masked_recon seed 123 (enc_lr=5e-06, head_lr=2e-05) =====
+/workspace/ky/repo/src/train_finetune.py:269: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(encoder_checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+
+========================================================================
+Fold 0: held-out test cluster 0
+train clusters: [1, 2, 3, 4]
+validation size: 463
+test cluster: 0
+train label counts:
+label
+0    1327
+1     521
+val label counts:
+label
+0    333
+1    130
+test label counts:
+label
+0    472
+1    415
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 0 test AUC: 0.656752; best threshold: 0.080729
+
+========================================================================
+Fold 1: held-out test cluster 1
+train clusters: [0, 2, 3, 4]
+validation size: 488
+test cluster: 1
+train label counts:
+label
+0    1177
+1     774
+val label counts:
+label
+0    295
+1    193
+test label counts:
+label
+0    660
+1     99
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 1 test AUC: 0.743863; best threshold: 0.312435
+
+========================================================================
+Fold 2: held-out test cluster 2
+train clusters: [0, 1, 3, 4]
+validation size: 562
+test cluster: 2
+train label counts:
+label
+0    1546
+1     699
+val label counts:
+label
+0    387
+1    175
+test label counts:
+label
+0    199
+1    192
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 2 test AUC: 0.753272; best threshold: 0.021335
+
+========================================================================
+Fold 3: held-out test cluster 3
+train clusters: [0, 1, 2, 4]
+validation size: 569
+test cluster: 3
+train label counts:
+label
+0    1533
+1     739
+val label counts:
+label
+0    384
+1    185
+test label counts:
+label
+0    215
+1    142
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 3 test AUC: 0.610154; best threshold: 0.025151
+
+========================================================================
+Fold 4: held-out test cluster 4
+train clusters: [0, 1, 2, 3]
+validation size: 479
+test cluster: 4
+train label counts:
+label
+0    1237
+1     678
+val label counts:
+label
+0    309
+1    170
+test label counts:
+label
+0    586
+1    218
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+Fold 4 test AUC: 0.702602; best threshold: 0.201068
+  masked_recon seed 123: mean-fold AUC = 0.6933
+
+===== SSL pretrain cross_channel seed 123 =====
+  [cross_channel s123] 30 ep, train/val=2700/300
+epoch 001: train_loss=0.807615, val_loss=0.580341
+epoch 002: train_loss=0.512198, val_loss=0.429812
+epoch 003: train_loss=0.404025, val_loss=0.354461
+epoch 004: train_loss=0.330646, val_loss=0.292178
+epoch 005: train_loss=0.274891, val_loss=0.247819
+epoch 006: train_loss=0.235854, val_loss=0.215742
+epoch 007: train_loss=0.201917, val_loss=0.192229
+epoch 008: train_loss=0.178442, val_loss=0.175129
+epoch 009: train_loss=0.159490, val_loss=0.164167
+epoch 010: train_loss=0.145610, val_loss=0.174094
+epoch 011: train_loss=0.133724, val_loss=0.143477
+epoch 012: train_loss=0.123807, val_loss=0.134631
+epoch 013: train_loss=0.114123, val_loss=0.134620
+epoch 014: train_loss=0.107215, val_loss=0.129556
+epoch 015: train_loss=0.100314, val_loss=0.120677
+epoch 016: train_loss=0.094337, val_loss=0.115826
+epoch 017: train_loss=0.089331, val_loss=0.116473
+epoch 018: train_loss=0.086354, val_loss=0.116524
+epoch 019: train_loss=0.084512, val_loss=0.108609
+epoch 020: train_loss=0.076686, val_loss=0.107897
+epoch 021: train_loss=0.076235, val_loss=0.105779
+epoch 022: train_loss=0.071236, val_loss=0.103001
+epoch 023: train_loss=0.069250, val_loss=0.099202
+epoch 024: train_loss=0.067447, val_loss=0.097826
+epoch 025: train_loss=0.065550, val_loss=0.097255
+epoch 026: train_loss=0.062497, val_loss=0.096526
+epoch 027: train_loss=0.059369, val_loss=0.096292
+epoch 028: train_loss=0.057957, val_loss=0.096587
+epoch 029: train_loss=0.056547, val_loss=0.104024
+epoch 030: train_loss=0.057605, val_loss=0.101403
+
+===== finetune cross_channel seed 123 (enc_lr=5e-06, head_lr=2e-05) =====
+/workspace/ky/repo/src/train_finetune.py:269: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(encoder_checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+
+========================================================================
+Fold 0: held-out test cluster 0
+train clusters: [1, 2, 3, 4]
+validation size: 463
+test cluster: 0
+train label counts:
+label
+0    1327
+1     521
+val label counts:
+label
+0    333
+1    130
+test label counts:
+label
+0    472
+1    415
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 0 test AUC: 0.634271; best threshold: 0.269895
+
+========================================================================
+Fold 1: held-out test cluster 1
+train clusters: [0, 2, 3, 4]
+validation size: 488
+test cluster: 1
+train label counts:
+label
+0    1177
+1     774
+val label counts:
+label
+0    295
+1    193
+test label counts:
+label
+0    660
+1     99
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 1 test AUC: 0.668534; best threshold: 0.423121
+
+========================================================================
+Fold 2: held-out test cluster 2
+train clusters: [0, 1, 3, 4]
+validation size: 562
+test cluster: 2
+train label counts:
+label
+0    1546
+1     699
+val label counts:
+label
+0    387
+1    175
+test label counts:
+label
+0    199
+1    192
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 2 test AUC: 0.624660; best threshold: 0.138769
+
+========================================================================
+Fold 3: held-out test cluster 3
+train clusters: [0, 1, 2, 4]
+validation size: 569
+test cluster: 3
+train label counts:
+label
+0    1533
+1     739
+val label counts:
+label
+0    384
+1    185
+test label counts:
+label
+0    215
+1    142
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 3 test AUC: 0.575598; best threshold: 0.079326
+
+========================================================================
+Fold 4: held-out test cluster 4
+train clusters: [0, 1, 2, 3]
+validation size: 479
+test cluster: 4
+train label counts:
+label
+0    1237
+1     678
+val label counts:
+label
+0    309
+1    170
+test label counts:
+label
+0    586
+1    218
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+Fold 4 test AUC: 0.791527; best threshold: 0.248177
+  cross_channel seed 123: mean-fold AUC = 0.6589
+
+===== SSL pretrain strip_jigsaw seed 123 =====
+  [strip_jigsaw s123] 30 ep, train/val=2700/300
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+epoch 001: train_loss=1.855933, val_loss=2.027373, val_top1=0.1667, val_top5=0.8400
+epoch 002: train_loss=1.833243, val_loss=1.859040, val_top1=0.1333, val_top5=0.8333
+epoch 003: train_loss=1.822761, val_loss=1.802783, val_top1=0.1867, val_top5=0.8233
+epoch 004: train_loss=1.805039, val_loss=1.822982, val_top1=0.1967, val_top5=0.8633
+epoch 005: train_loss=1.741915, val_loss=1.688403, val_top1=0.2600, val_top5=0.9333
+epoch 006: train_loss=1.173367, val_loss=0.676693, val_top1=0.7567, val_top5=0.9967
+epoch 007: train_loss=0.356495, val_loss=0.185050, val_top1=0.9367, val_top5=1.0000
+epoch 008: train_loss=0.127388, val_loss=0.098187, val_top1=0.9767, val_top5=1.0000
+epoch 009: train_loss=0.069388, val_loss=0.075675, val_top1=0.9867, val_top5=1.0000
+epoch 010: train_loss=0.050645, val_loss=0.037000, val_top1=0.9867, val_top5=1.0000
+epoch 011: train_loss=0.035647, val_loss=0.052621, val_top1=0.9867, val_top5=1.0000
+epoch 012: train_loss=0.035360, val_loss=0.026143, val_top1=0.9933, val_top5=1.0000
+epoch 013: train_loss=0.023584, val_loss=0.029448, val_top1=0.9900, val_top5=1.0000
+epoch 014: train_loss=0.026301, val_loss=0.018350, val_top1=0.9933, val_top5=1.0000
+epoch 015: train_loss=0.020585, val_loss=0.013308, val_top1=0.9967, val_top5=1.0000
+epoch 016: train_loss=0.015795, val_loss=0.020240, val_top1=0.9933, val_top5=1.0000
+epoch 017: train_loss=0.011397, val_loss=0.031308, val_top1=0.9900, val_top5=1.0000
+epoch 018: train_loss=0.009153, val_loss=0.006609, val_top1=1.0000, val_top5=1.0000
+epoch 019: train_loss=0.011943, val_loss=0.005033, val_top1=1.0000, val_top5=1.0000
+epoch 020: train_loss=0.008235, val_loss=0.008787, val_top1=0.9967, val_top5=1.0000
+epoch 021: train_loss=0.006093, val_loss=0.019259, val_top1=0.9967, val_top5=1.0000
+epoch 022: train_loss=0.006414, val_loss=0.010638, val_top1=0.9967, val_top5=1.0000
+epoch 023: train_loss=0.003960, val_loss=0.004507, val_top1=1.0000, val_top5=1.0000
+epoch 024: train_loss=0.007125, val_loss=0.019032, val_top1=0.9933, val_top5=1.0000
+epoch 025: train_loss=0.005748, val_loss=0.020014, val_top1=0.9967, val_top5=1.0000
+epoch 026: train_loss=0.004128, val_loss=0.003813, val_top1=1.0000, val_top5=1.0000
+epoch 027: train_loss=0.005638, val_loss=0.007805, val_top1=0.9933, val_top5=1.0000
+epoch 028: train_loss=0.003366, val_loss=0.006937, val_top1=1.0000, val_top5=1.0000
+epoch 029: train_loss=0.004231, val_loss=0.004179, val_top1=1.0000, val_top5=1.0000
+epoch 030: train_loss=0.003071, val_loss=0.013139, val_top1=0.9967, val_top5=1.0000
+
+===== finetune strip_jigsaw seed 123 (enc_lr=5e-06, head_lr=2e-05) =====
+/workspace/ky/repo/src/train_finetune.py:269: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(encoder_checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+
+========================================================================
+Fold 0: held-out test cluster 0
+train clusters: [1, 2, 3, 4]
+validation size: 463
+test cluster: 0
+train label counts:
+label
+0    1327
+1     521
+val label counts:
+label
+0    333
+1    130
+test label counts:
+label
+0    472
+1    415
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 0 test AUC: 0.676904; best threshold: 0.558250
+
+========================================================================
+Fold 1: held-out test cluster 1
+train clusters: [0, 2, 3, 4]
+validation size: 488
+test cluster: 1
+train label counts:
+label
+0    1177
+1     774
+val label counts:
+label
+0    295
+1    193
+test label counts:
+label
+0    660
+1     99
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 1 test AUC: 0.726278; best threshold: 0.284964
+
+========================================================================
+Fold 2: held-out test cluster 2
+train clusters: [0, 1, 3, 4]
+validation size: 562
+test cluster: 2
+train label counts:
+label
+0    1546
+1     699
+val label counts:
+label
+0    387
+1    175
+test label counts:
+label
+0    199
+1    192
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 2 test AUC: 0.703125; best threshold: 0.354400
+
+========================================================================
+Fold 3: held-out test cluster 3
+train clusters: [0, 1, 2, 4]
+validation size: 569
+test cluster: 3
+train label counts:
+label
+0    1533
+1     739
+val label counts:
+label
+0    384
+1    185
+test label counts:
+label
+0    215
+1    142
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 3 test AUC: 0.584081; best threshold: 0.342097
+
+========================================================================
+Fold 4: held-out test cluster 4
+train clusters: [0, 1, 2, 3]
+validation size: 479
+test cluster: 4
+train label counts:
+label
+0    1237
+1     678
+val label counts:
+label
+0    309
+1    170
+test label counts:
+label
+0    586
+1    218
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+Fold 4 test AUC: 0.653443; best threshold: 0.339793
+  strip_jigsaw seed 123: mean-fold AUC = 0.6688
+
+===== SSL pretrain sequential seed 123 =====
+  [sequential s123] 30 ep, train/val=2700/300
+epoch 001: train_loss=0.926536, val_loss=0.828281
+epoch 002: train_loss=0.698177, val_loss=0.623869
+epoch 003: train_loss=0.583473, val_loss=0.558807
+epoch 004: train_loss=0.531049, val_loss=0.452248
+epoch 005: train_loss=0.465377, val_loss=0.421370
+epoch 006: train_loss=0.424811, val_loss=0.392935
+epoch 007: train_loss=0.402655, val_loss=0.376053
+epoch 008: train_loss=0.374697, val_loss=0.370388
+epoch 009: train_loss=0.368420, val_loss=0.333608
+epoch 010: train_loss=0.353276, val_loss=0.338360
+epoch 011: train_loss=0.339405, val_loss=0.311839
+epoch 012: train_loss=0.324186, val_loss=0.320531
+epoch 013: train_loss=0.332846, val_loss=0.299600
+epoch 014: train_loss=0.320328, val_loss=0.302745
+epoch 015: train_loss=0.310545, val_loss=0.278822
+epoch 016: train_loss=0.310000, val_loss=0.277929
+epoch 017: train_loss=0.305827, val_loss=0.282592
+epoch 018: train_loss=0.298465, val_loss=0.275080
+epoch 019: train_loss=0.298732, val_loss=0.278271
+epoch 020: train_loss=0.291459, val_loss=0.264093
+epoch 021: train_loss=0.285839, val_loss=0.268044
+epoch 022: train_loss=0.276809, val_loss=0.278318
+epoch 023: train_loss=0.273810, val_loss=0.268687
+epoch 024: train_loss=0.267683, val_loss=0.244756
+epoch 025: train_loss=0.272356, val_loss=0.244832
+epoch 026: train_loss=0.262115, val_loss=0.255177
+epoch 027: train_loss=0.262159, val_loss=0.260085
+epoch 028: train_loss=0.249011, val_loss=0.248211
+epoch 029: train_loss=0.241232, val_loss=0.244711
+epoch 030: train_loss=0.251320, val_loss=0.226448
+/workspace/ky/repo/scripts/run_kentucky_gpu.py:162: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  s2.encoder.load_state_dict(torch.load(s1_enc, map_location=device)["encoder_state_dict"], strict=True)
+epoch 001: train_loss=0.806181, val_loss=0.602530
+epoch 002: train_loss=0.552480, val_loss=0.480026
+epoch 003: train_loss=0.467306, val_loss=0.423274
+epoch 004: train_loss=0.420202, val_loss=0.383078
+epoch 005: train_loss=0.386050, val_loss=0.361466
+epoch 006: train_loss=0.361277, val_loss=0.335113
+epoch 007: train_loss=0.338788, val_loss=0.315408
+epoch 008: train_loss=0.317870, val_loss=0.299187
+epoch 009: train_loss=0.301761, val_loss=0.284863
+epoch 010: train_loss=0.285202, val_loss=0.270299
+epoch 011: train_loss=0.271887, val_loss=0.266122
+epoch 012: train_loss=0.258712, val_loss=0.249146
+epoch 013: train_loss=0.248014, val_loss=0.244126
+epoch 014: train_loss=0.236486, val_loss=0.233675
+epoch 015: train_loss=0.227192, val_loss=0.222508
+epoch 016: train_loss=0.219117, val_loss=0.218696
+epoch 017: train_loss=0.210733, val_loss=0.208644
+epoch 018: train_loss=0.202407, val_loss=0.202272
+epoch 019: train_loss=0.197291, val_loss=0.197285
+epoch 020: train_loss=0.188676, val_loss=0.191261
+
+===== finetune sequential seed 123 (enc_lr=5e-06, head_lr=2e-05) =====
+/workspace/ky/repo/src/train_finetune.py:269: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(encoder_checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+
+========================================================================
+Fold 0: held-out test cluster 0
+train clusters: [1, 2, 3, 4]
+validation size: 463
+test cluster: 0
+train label counts:
+label
+0    1327
+1     521
+val label counts:
+label
+0    333
+1    130
+test label counts:
+label
+0    472
+1    415
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 0 test AUC: 0.670426; best threshold: 0.503257
+
+========================================================================
+Fold 1: held-out test cluster 1
+train clusters: [0, 2, 3, 4]
+validation size: 488
+test cluster: 1
+train label counts:
+label
+0    1177
+1     774
+val label counts:
+label
+0    295
+1    193
+test label counts:
+label
+0    660
+1     99
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 1 test AUC: 0.685017; best threshold: 0.339691
+
+========================================================================
+Fold 2: held-out test cluster 2
+train clusters: [0, 1, 3, 4]
+validation size: 562
+test cluster: 2
+train label counts:
+label
+0    1546
+1     699
+val label counts:
+label
+0    387
+1    175
+test label counts:
+label
+0    199
+1    192
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 2 test AUC: 0.670959; best threshold: 0.283610
+
+========================================================================
+Fold 3: held-out test cluster 3
+train clusters: [0, 1, 2, 4]
+validation size: 569
+test cluster: 3
+train label counts:
+label
+0    1533
+1     739
+val label counts:
+label
+0    384
+1    185
+test label counts:
+label
+0    215
+1    142
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/workspace/ky/repo/src/models_resnet18.py:258: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(encoder_checkpoint_path).resolve(), map_location="cpu")
+Fold 3 test AUC: 0.576122; best threshold: 0.221122
+
+========================================================================
+Fold 4: held-out test cluster 4
+train clusters: [0, 1, 2, 3]
+validation size: 479
+test cluster: 4
+train label counts:
+label
+0    1237
+1     678
+val label counts:
+label
+0    309
+1    170
+test label counts:
+label
+0    586
+1    218
+channel means and stds shape: (13,) (13,)
+Loaded SSL encoder keys: 120
+Missing keys after load: 2
+Unexpected/skipped keys: 0
+Expected classifier-head missing keys: ['fc.1.bias', 'fc.1.weight']
+model parameter count: 11175681
+number of trainable parameters: 11175681
+number of loaded pretrained encoder keys: 120
+device sanity model: cuda:0
+device sanity X: cuda:0
+device sanity y: cuda:0
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+/usr/local/lib/python3.11/dist-packages/torch/autograd/graph.py:769: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/workspace/ky/repo/src/train_finetune.py:527: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint_payload = torch.load(checkpoint_path, map_location="cpu")
+/workspace/ky/repo/src/utils.py:88: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(Path(path).resolve(), map_location=map_location)
+/usr/local/lib/python3.11/dist-packages/torch/nn/modules/linear.py:117: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#results-reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:185.)
+  return F.linear(input, self.weight, self.bias)
+Fold 4 test AUC: 0.605732; best threshold: 0.148397
+  sequential seed 123: mean-fold AUC = 0.6417
+
+===== KENTUCKY KGS6C ps64 SUMMARY (mean +/- SD over seeds) =====
+  scratch        AUC = 0.7222 +/- 0.0000  (n=1)
+  masked_recon   AUC = 0.6933 +/- 0.0000  (n=1)
+  cross_channel  AUC = 0.6589 +/- 0.0000  (n=1)
+  strip_jigsaw   AUC = 0.6688 +/- 0.0000  (n=1)
+  sequential     AUC = 0.6417 +/- 0.0000  (n=1)
+  masked_recon - scratch = -0.0289  (2x max seed-SD 0.0000) -> SSL hurts
+  cross_channel - scratch = -0.0633  (2x max seed-SD 0.0000) -> SSL hurts
+  strip_jigsaw - scratch = -0.0534  (2x max seed-SD 0.0000) -> SSL hurts
+  sequential - scratch = -0.0805  (2x max seed-SD 0.0000) -> SSL hurts
+
+wrote /workspace/ky/run_s123/ky_results.csv

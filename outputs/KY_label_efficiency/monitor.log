@@ -1,0 +1,314 @@
+===== iter 1 12:44:59 UTC =====
+===== KY LABEL-EFFICIENCY  12:44:59 =====
+GPU : 99 %, 6991 MiB, 203.67 W
+MEM : 13134 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 2 12:50:35 UTC =====
+===== KY LABEL-EFFICIENCY  12:50:35 =====
+GPU : 99 %, 6991 MiB, 189.16 W
+MEM : 13131 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 3 12:55:49 UTC =====
+===== KY LABEL-EFFICIENCY  12:55:49 =====
+GPU : 99 %, 6991 MiB, 190.20 W
+MEM : 13134 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 4 13:01:02 UTC =====
+===== KY LABEL-EFFICIENCY  13:01:02 =====
+GPU : 99 %, 6991 MiB, 189.87 W
+MEM : 13136 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 5 13:06:15 UTC =====
+===== KY LABEL-EFFICIENCY  13:06:15 =====
+GPU : 99 %, 6991 MiB, 195.46 W
+MEM : 13135 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 6 13:11:27 UTC =====
+===== KY LABEL-EFFICIENCY  13:11:27 =====
+GPU : 99 %, 6991 MiB, 201.81 W
+MEM : 13136 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 7 13:16:40 UTC =====
+===== KY LABEL-EFFICIENCY  13:16:40 =====
+GPU : 99 %, 6991 MiB, 200.78 W
+MEM : 13132 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 8 13:21:53 UTC =====
+===== KY LABEL-EFFICIENCY  13:21:53 =====
+GPU : 99 %, 7011 MiB, 228.97 W
+MEM : 13943 / 29563 MiB   PROC: 9
+rows: 0 / 30 (2 methods x 5 fractions x 3 seeds)
+===== iter 9 13:27:07 UTC =====
+===== KY LABEL-EFFICIENCY  13:27:07 =====
+GPU : 80 %, 7065 MiB, 267.21 W
+MEM : 17732 / 29563 MiB   PROC: 5
+rows: 2 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+===== iter 10 13:32:23 UTC =====
+===== KY LABEL-EFFICIENCY  13:32:23 =====
+GPU : 100 %, 7077 MiB, 277.92 W
+MEM : 21074 / 29563 MiB   PROC: 5
+rows: 5 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+===== iter 11 13:37:40 UTC =====
+===== KY LABEL-EFFICIENCY  13:37:40 =====
+GPU : 66 %, 7077 MiB, 273.85 W
+MEM : 22825 / 29563 MiB   PROC: 9
+rows: 8 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+===== iter 12 13:42:56 UTC =====
+===== KY LABEL-EFFICIENCY  13:42:56 =====
+GPU : 100 %, 7077 MiB, 277.98 W
+MEM : 23877 / 29563 MiB   PROC: 9
+rows: 10 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+===== iter 13 13:48:11 UTC =====
+===== KY LABEL-EFFICIENCY  13:48:11 =====
+GPU : 100 %, 7077 MiB, 278.80 W
+MEM : 24683 / 29563 MiB   PROC: 9
+rows: 11 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+===== iter 14 13:53:27 UTC =====
+===== KY LABEL-EFFICIENCY  13:53:27 =====
+GPU : 100 %, 7077 MiB, 279.68 W
+MEM : 25685 / 29563 MiB   PROC: 9
+rows: 13 / 30 (2 methods x 5 fractions x 3 seeds)
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+===== iter 15 13:58:42 UTC =====
+===== KY LABEL-EFFICIENCY  13:58:42 =====
+GPU : 100 %, 7077 MiB, 279.38 W
+MEM : 27078 / 29563 MiB   PROC: 9
+rows: 14 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+===== iter 16 14:03:58 UTC =====
+===== KY LABEL-EFFICIENCY  14:03:58 =====
+GPU : 97 %, 7077 MiB, 279.02 W
+MEM : 28487 / 29563 MiB   PROC: 7
+rows: 18 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305
+===== iter 17 14:09:14 UTC =====
+===== KY LABEL-EFFICIENCY  14:09:14 =====
+GPU : 100 %, 7077 MiB, 278.05 W
+MEM : 28583 / 29563 MiB   PROC: 7
+rows: 22 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=123  frac=0.05  n=102   AUC=0.6744096830084756
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  masked_recon  s=42   frac=0.5   n=1023  AUC=0.6721586086055364
+  masked_recon  s=7    frac=0.05  n=102   AUC=0.674968594302374
+  masked_recon  s=7    frac=0.1   n=204   AUC=0.6884291993465417
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305
+===== iter 18 14:14:30 UTC =====
+===== KY LABEL-EFFICIENCY  14:14:30 =====
+GPU : 100 %, 7077 MiB, 278.79 W
+MEM : 28571 / 29563 MiB   PROC: 9
+rows: 24 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=123  frac=0.05  n=102   AUC=0.6744096830084756
+  masked_recon  s=123  frac=0.1   n=204   AUC=0.6577251707897837
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  masked_recon  s=42   frac=0.5   n=1023  AUC=0.6721586086055364
+  masked_recon  s=7    frac=0.05  n=102   AUC=0.674968594302374
+  masked_recon  s=7    frac=0.1   n=204   AUC=0.6884291993465417
+  masked_recon  s=7    frac=0.25  n=511   AUC=0.6254563418237871
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305
+===== iter 19 14:19:46 UTC =====
+===== KY LABEL-EFFICIENCY  14:19:46 =====
+GPU : 100 %, 7077 MiB, 278.51 W
+MEM : 28435 / 29563 MiB   PROC: 9
+rows: 25 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=123  frac=0.05  n=102   AUC=0.6744096830084756
+  masked_recon  s=123  frac=0.1   n=204   AUC=0.6577251707897837
+  masked_recon  s=123  frac=0.25  n=511   AUC=0.6834543769407084
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  masked_recon  s=42   frac=0.5   n=1023  AUC=0.6721586086055364
+  masked_recon  s=7    frac=0.05  n=102   AUC=0.674968594302374
+  masked_recon  s=7    frac=0.1   n=204   AUC=0.6884291993465417
+  masked_recon  s=7    frac=0.25  n=511   AUC=0.6254563418237871
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305
+===== iter 20 14:25:02 UTC =====
+===== KY LABEL-EFFICIENCY  14:25:02 =====
+GPU : 99 %, 4720 MiB, 278.82 W
+MEM : 26198 / 29563 MiB   PROC: 6
+rows: 28 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=123  frac=0.05  n=102   AUC=0.6744096830084756
+  masked_recon  s=123  frac=0.1   n=204   AUC=0.6577251707897837
+  masked_recon  s=123  frac=0.25  n=511   AUC=0.6834543769407084
+  masked_recon  s=123  frac=0.5   n=1023  AUC=0.7326676831247837
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  masked_recon  s=42   frac=0.5   n=1023  AUC=0.6721586086055364
+  masked_recon  s=42   frac=1.0   n=2046  AUC=0.6666756166131729
+  masked_recon  s=7    frac=0.05  n=102   AUC=0.674968594302374
+  masked_recon  s=7    frac=0.1   n=204   AUC=0.6884291993465417
+  masked_recon  s=7    frac=0.25  n=511   AUC=0.6254563418237871
+  masked_recon  s=7    frac=0.5   n=1023  AUC=0.6667658643985257
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305
+===== iter 21 14:30:17 UTC =====
+===== KY LABEL-EFFICIENCY  14:30:17 =====
+GPU : 99 %, 2361 MiB, 279.46 W
+MEM : 23721 / 29563 MiB   PROC: 3
+rows: 29 / 30 (2 methods x 5 fractions x 3 seeds)
+  masked_recon  s=123  frac=0.05  n=102   AUC=0.6744096830084756
+  masked_recon  s=123  frac=0.1   n=204   AUC=0.6577251707897837
+  masked_recon  s=123  frac=0.25  n=511   AUC=0.6834543769407084
+  masked_recon  s=123  frac=0.5   n=1023  AUC=0.7326676831247837
+  masked_recon  s=42   frac=0.05  n=102   AUC=0.6079117589873138
+  masked_recon  s=42   frac=0.1   n=204   AUC=0.6384583391966403
+  masked_recon  s=42   frac=0.25  n=511   AUC=0.6924670750400884
+  masked_recon  s=42   frac=0.5   n=1023  AUC=0.6721586086055364
+  masked_recon  s=42   frac=1.0   n=2046  AUC=0.6666756166131729
+  masked_recon  s=7    frac=0.05  n=102   AUC=0.674968594302374
+  masked_recon  s=7    frac=0.1   n=204   AUC=0.6884291993465417
+  masked_recon  s=7    frac=0.25  n=511   AUC=0.6254563418237871
+  masked_recon  s=7    frac=0.5   n=1023  AUC=0.6667658643985257
+  masked_recon  s=7    frac=1.0   n=2046  AUC=0.6648441301298129
+  scratch       s=123  frac=0.05  n=102   AUC=0.6212954580954785
+  scratch       s=123  frac=0.1   n=204   AUC=0.6703258085118061
+  scratch       s=123  frac=0.25  n=511   AUC=0.6781804976141729
+  scratch       s=123  frac=0.5   n=1023  AUC=0.6702861529330364
+  scratch       s=123  frac=1.0   n=2046  AUC=0.7007859474978602
+  scratch       s=42   frac=0.05  n=102   AUC=0.6914494017766717
+  scratch       s=42   frac=0.1   n=204   AUC=0.6963779279114235
+  scratch       s=42   frac=0.25  n=511   AUC=0.682285817998823
+  scratch       s=42   frac=0.5   n=1023  AUC=0.7191851229799577
+  scratch       s=42   frac=1.0   n=2046  AUC=0.6841371504075757
+  scratch       s=7    frac=0.05  n=102   AUC=0.7005099343268576
+  scratch       s=7    frac=0.1   n=204   AUC=0.6725063730785025
+  scratch       s=7    frac=0.25  n=511   AUC=0.6390124647906161
+  scratch       s=7    frac=0.5   n=1023  AUC=0.6843016336593599
+  scratch       s=7    frac=1.0   n=2046  AUC=0.6951480194617305

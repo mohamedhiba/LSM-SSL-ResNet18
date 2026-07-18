@@ -1,0 +1,5 @@
+epoch 025: train_loss=0.023737, val_loss=0.689532, val_auc=0.9411
+/usr/local/lib/python3.10/dist-packages/torch/nn/modules/linear.py:114: UserWarning: Deterministic behavior was enabled with either `torch.use_deterministic_algorithms(True)` or `at::Context::setDeterministicAlgorithms(true)`, but this operation is not deterministic because it uses CuBLAS and you have CUDA >= 10.2. To enable deterministic behavior in this case, you must set an environment variable before running your PyTorch application: CUBLAS_WORKSPACE_CONFIG=:4096:8 or CUBLAS_WORKSPACE_CONFIG=:16:8. For more information, go to https://docs.nvidia.com/cuda/cublas/index.html#cublasApi_reproducibility (Triggered internally at ../aten/src/ATen/Context.cpp:156.)
+  return F.linear(input, self.weight, self.bias)
+[15/15] DONE scratch_full_model_baseline_seed44_fold4_encoderlrscratch auc=0.9510 pr_auc=0.9562 best_epoch=10 elapsed_h=0.46 avg_min_per_job=1.9
+[downstream] tag=scratch complete: 15 metric rows

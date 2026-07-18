@@ -1,0 +1,6 @@
+model_display_name,pretext_task,pretext_task_outcome,downstream_transfer_outcome,mean_auc,std_auc,worst_fold_auc,scientific_interpretation
+Scratch,None,Not applicable,Reference baseline,0.7788415888071595,0.10475350641885786,0.6240234375,Supervised baseline; no SSL pretraining.
+Masked reconstruction,Masked reconstruction,Solved sufficiently for representation learning,Effective and stable,0.8209115257555426,0.04301100712104401,0.7863247863247863,Effective SSL; strongest spatial stability and best worst-fold AUC.
+Contrastive learning,SimCLR-style contrastive learning,Solved sufficiently for representation learning,Effective average discrimination,0.8380075908531788,0.08494126273870217,0.7041420118343196,Effective SSL; highest mean AUC.
+Jigsaw,Jigsaw permutation prediction,Near random,Weak and below Scratch,0.7225055206837693,0.10517568907636124,0.6055363321799307,Weak or ineffective SSL; pretext task near random and downstream underperforms Scratch.
+Rotation prediction,Rotation prediction,Solved almost perfectly,Weak and below Scratch,0.7255000571498961,0.09152247522098715,0.6020408163265306,"Pretext task solved almost perfectly, but downstream transfer is weak and underperforms Scratch."

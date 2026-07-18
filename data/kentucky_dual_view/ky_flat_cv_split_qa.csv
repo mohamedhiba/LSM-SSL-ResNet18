@@ -1,0 +1,6 @@
+fold_id,n_samples,n_pos,n_neg,group_leak_count,overall_qa_passed
+0,3680,1840,1840,0,True
+1,3679,1839,1840,0,True
+2,3679,1840,1839,0,True
+3,3679,1839,1840,0,True
+4,3679,1840,1839,0,True

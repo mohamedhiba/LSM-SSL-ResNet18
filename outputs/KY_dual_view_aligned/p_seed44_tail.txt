@@ -1,0 +1,1 @@
+[ssl] tasks=['dual_view_masked_reconstruction'] seeds=[44] corpus=unlabeled_dual_view_padded_index_ky10m_n20000.csv epochs<=50 patience=10

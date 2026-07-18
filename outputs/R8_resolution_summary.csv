@@ -1,0 +1,3 @@
+arm,seed42,seed123,seed7,mean_AUC_15folds,SD_15folds,seed_to_seed_SD,mean_PR_AUC
+30m,0.506,0.473,0.634,0.538,0.159,0.085,0.571
+10m,0.573,0.658,0.596,0.609,0.173,0.044,0.626

@@ -1,0 +1,6 @@
+Model,Pretext task,Mean AUC,AUC SD,Worst-fold AUC,Mean PR-AUC,Mean F1 at 0.5,Main finding
+Scratch,None,0.779,0.105,0.624,0.771,0.664,Baseline; high spatial fold variability
+Masked reconstruction,Masked reconstruction,0.821,0.043,0.786,0.814,0.711,Most stable transfer and best worst-fold AUC
+Contrastive learning,Contrastive learning,0.838,0.085,0.704,0.831,0.726,Highest mean AUC
+Jigsaw,Jigsaw,0.723,0.105,0.606,0.715,0.641,Weak transfer; below Scratch
+Rotation prediction,Rotation prediction,0.726,0.092,0.602,0.702,0.586,"Pretext solved, but weak downstream transfer"

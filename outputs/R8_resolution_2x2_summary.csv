@@ -1,0 +1,5 @@
+arm,mean_AUC,seed_to_seed_SD,mean_PR_AUC,n_seeds
+scratch_30m,0.561,0.036,0.586,3
+scratch_10m,0.636,0.113,0.667,3
+ssl_30m,0.55,0.064,0.578,5
+ssl_10m,0.601,0.036,0.621,5
