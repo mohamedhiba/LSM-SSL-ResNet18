@@ -31,3 +31,4 @@ outputs/KY_dual_view_aligned/smoke/
 outputs/KY_dual_view_aligned/smoke_local.log
 
 nohup.out
+.idea/
